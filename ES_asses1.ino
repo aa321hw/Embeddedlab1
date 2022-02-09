@@ -19,11 +19,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
+  //Create signal B
   digitalWrite(SIGNALBPIN,HIGH);
   delay(500);
   digitalWrite(SIGNALBPIN,LOW);
   int count = 0;
 
+  //Signal A in normal mode
   if (mode == 1){
     
     for (int i = a;count < c;i = i + increase){
@@ -36,7 +38,8 @@ void loop() {
     
     }
   }
-
+  
+  //Signal A in alternative mode
   if (mode == 2){
 
     for (int i = a * c;count < c;i = i - increase){
