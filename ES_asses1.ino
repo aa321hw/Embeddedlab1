@@ -1,13 +1,14 @@
-int mult = 1;
+int mult = 10 * 2;
 
 int SIGNALAPIN = 8;
 int SIGNALBPIN = 9;
-int a = 100 * mult;
-int b = 1200 * mult;
-int c = 9 * mult;
-int d = 6500 * mult;
-int increase = 50 *mult;
+int a = 0.1 * mult;
+int b = 1.2 * mult;
+int c = 9;
+int d = 6.5 * mult;
+int increase = 0.05 *mult;
 int mode = 1;
+int signalbdelay = (10 - 6.5) * 2; 
 
 void setup() {
   // put your setup code here, to run once:
@@ -21,7 +22,7 @@ void loop() {
 
   //Create signal B
   digitalWrite(SIGNALBPIN,HIGH);
-  delay(500);
+  delay(signalbdelay);
   digitalWrite(SIGNALBPIN,LOW);
   int count = 0;
 
