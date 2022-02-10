@@ -7,8 +7,9 @@ int b = 1.2 * mult;
 int c = 9;
 int d = 6.5 * mult;
 int increase = 0.05 *mult;
-int mode = 1;
-int signalbdelay = (10 - 6.5) * 2; 
+int signalbdelay = 1 * 2; 
+
+int mode = 2;
 
 void setup() {
   // put your setup code here, to run once:
@@ -43,7 +44,7 @@ void loop() {
   //Signal A in alternative mode
   if (mode == 2){
 
-    for (int i = a * c;count < c;i = i - increase){
+    for (int i = a + (increase * (c-1));count < c;i = i - increase){
 
     digitalWrite(SIGNALAPIN,HIGH);
     delay(i);
